@@ -1,0 +1,198 @@
+        :root {
+            --emerald: #0d4c3c;
+            --emerald-container: #dcfce7;
+            --surface: #f8faf7;
+            --surface-container: #eef4f0;
+            --outline: #d1d5db;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html,
+        body {
+            width: 100%;
+            min-height: 100vh;
+            background: var(--surface);
+            font-family: 'Inter', sans-serif;
+            color: var(--emerald);
+        }
+
+        .topbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 24px 32px;
+        }
+
+        .brand {
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        .help {
+            width: 26px;
+            height: 26px;
+            border-radius: 50%;
+            border: 1.5px solid var(--outline);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #6b7280;
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        .progress-wrap {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            margin-top: 8px;
+        }
+
+        .progress-bar {
+            display: flex;
+            gap: 6px;
+        }
+
+        .seg {
+            width: 38px;
+            height: 5px;
+            border-radius: 3px;
+            background: var(--outline);
+        }
+
+        .seg.active {
+            background: var(--emerald);
+        }
+
+        .step-label {
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            color: #6b7280;
+            text-transform: uppercase;
+        }
+
+        .content {
+            max-width: 640px;
+            margin: 40px auto 0;
+            padding: 0 24px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 34px;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            margin-bottom: 14px;
+        }
+
+        .sub {
+            font-size: 16px;
+            color: #5b6a63;
+            line-height: 1.5;
+            margin-bottom: 36px;
+        }
+
+        .cards {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .card {
+            background: var(--surface-container);
+            border-radius: 16px;
+            padding: 22px 8px 26px;
+            width: 250px;
+        }
+
+        .card-label {
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            color: #374151;
+            margin-bottom: 10px;
+        }
+
+        .picker-wrap {
+            position: relative;
+            height: 200px;
+            width: 100%;
+            -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 35%, black 65%, transparent 100%);
+            mask-image: linear-gradient(to bottom, transparent 0%, black 35%, black 65%, transparent 100%);
+        }
+
+        .picker {
+            height: 200px;
+            overflow-y: scroll;
+            scroll-snap-type: y mandatory;
+            scrollbar-width: none;
+        }
+
+        .picker::-webkit-scrollbar {
+            display: none;
+        }
+
+        .picker-item {
+            height: 56px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            font-size: 20px;
+            font-weight: 500;
+            color: #c7d0cb;
+            scroll-snap-align: center;
+        }
+
+        .picker-item.selected {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--emerald);
+        }
+
+        .unit {
+            font-size: 14px;
+            font-weight: 400;
+            color: #9ca3af;
+        }
+
+        .center-lines {
+            position: absolute;
+            top: 72px;
+            left: 0;
+            right: 0;
+            height: 56px;
+            border-top: 1px solid #dbe6df;
+            border-bottom: 1px solid #dbe6df;
+            pointer-events: none;
+        }
+
+        .footer {
+            max-width: 640px;
+            margin: 50px auto 0;
+            padding: 0 24px 40px;
+        }
+
+        .cta {
+            width: 100%;
+            background: var(--emerald);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 18px 0;
+            font-size: 16px;
+            font-weight: 700;
+            font-family: 'Inter', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            cursor: pointer;
+        }

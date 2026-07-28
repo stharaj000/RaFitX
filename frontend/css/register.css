@@ -1,0 +1,272 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+body {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+/* LEFT SIDE */
+
+.left-side {
+    width: 50%;
+    height: 100vh;
+    background-image: url(/frontend/img/back.jpg);
+    background-size: cover;
+    background-position: left;
+    position: relative;
+}
+
+.dark-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(1, 20, 15, 0.59);
+}
+
+.left-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px;
+    color: white;
+}
+
+.brand-name {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.left-title {
+    font-size: 42px;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.left-text {
+    font-size: 16px;
+    line-height: 1.6;
+    max-width: 480px;
+    color: #dddddd;
+    margin-bottom: 30px;
+}
+
+.athletes-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.avatars {
+    display: flex;
+}
+
+.bottom-tag {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.gear-icon {
+            width: 28px;
+            height: 28px;
+            border: 1px solid white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+        }
+
+/* RIGHT SIDE */
+
+.right-side {
+    width: 50%;
+    height: 100vh;
+    background-color: #f7f7f5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow-y: auto;
+}
+
+.form-box {
+    width: 520px;
+    padding: 40px 0;
+}
+
+.welcome-title {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.welcome-subtitle {
+    font-size: 15px;
+    color: #555555;
+    margin-bottom: 30px;
+}
+
+.social-buttons {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 25px;
+}
+
+.social-btn {
+    flex: 1;
+    height: 50px;
+    border: none;
+    border-radius: 8px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 15px;
+    cursor: pointer;
+    border: 1px solid #cccccc;
+}
+
+.social-btn.apple-btn {
+    background-color: #1a1a1a;
+    color: white;
+}
+
+.social-icon {
+    width: 22px;
+    height: 22px;
+    border-radius: 4px;
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #999999;
+    font-size: 12px;
+    letter-spacing: 1px;
+    margin-bottom: 25px;
+}
+
+.divider-line {
+    flex: 1;
+    height: 1px;
+    background-color: #dddddd;
+}
+
+.divider span {
+    padding: 0 12px;
+}
+
+.field-label {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.input-wrap {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-wrap .icon {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #777777;
+    font-size: 16px;
+}
+
+.field-input {
+    width: 100%;
+    height: 50px;
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+    padding: 0 16px 0 16px;
+    font-size: 15px;
+    background-color: white;
+}
+
+.two-col {
+    display: flex;
+    gap: 16px;
+}
+
+.two-col .input-wrap {
+    flex: 1;
+}
+
+.terms-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.terms-row input {
+    width: 18px;
+    height: 18px;
+    margin-top: 2px;
+}
+
+.terms-row label {
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.terms-row a {
+    font-weight: bold;
+    color: #1a1a1a;
+    text-decoration: none;
+}
+
+.signup-btn {
+    width: 100%;
+    height: 54px;
+    background-color: #0D4C3C;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.signin-text {
+    text-align: center;
+    font-size: 14px;
+}
+
+.signin-text a {
+    font-weight: bold;
+    color: #1a1a1a;
+    text-decoration: none;
+}

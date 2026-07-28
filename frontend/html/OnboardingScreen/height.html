@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>RaFitX — How tall are you?</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/frontend/css/OnboardingCss/height.css">
+</head>
+
+<body>
+    <div class="topbar">
+        <div class="brand">RaFitX</div>
+        <div class="help">?</div>
+    </div>
+    <div class="progress-wrap">
+        <div class="progress-bar">
+            <div class="seg active"></div>
+            <div class="seg active"></div>
+            <div class="seg active"></div>
+            <div class="seg active"></div>
+            <div class="seg active"></div>
+            <div class="seg"></div>
+        </div>
+        <div class="step-label">STEP 5/6</div>
+    </div>
+    <div class="content">
+        <h1>How tall are you?</h1>
+        <div class="sub">Height helps us calculate your BMI and daily caloric needs more accurately.</div>
+        <div class="toggle">
+            <button class="active" id="cmBtn">cm</button>
+            <button id="ftBtn">ft/in</button>
+        </div>
+        <div class="picker-wrap">
+            <div class="center-lines"></div>
+            <div class="picker" id="heightPicker"></div>
+        </div>
+    </div>
+    <div class="footer">
+        <a href="goal.html" style="text-decoration: none;"><button class="cta">Continue
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12" />
+                    <polyline points="12 5 19 12 12 19" />
+                </svg>
+            </button>
+        </a>
+    </div>
+
+    <script>
+        const picker = document.getElementById('heightPicker');
+        const itemH = 52;
+        const min = 120, max = 220, def = 143;
+        function build() {
+            picker.innerHTML = '';
+            for (let v = min; v <= max; v++) {
+                const div = document.createElement('div');
+                div.className = 'picker-item';
+                div.dataset.value = v;
+                div.innerHTML = v + (v === def ? ' <span class="unit">cm</span>' : '');
+                picker.appendChild(div);
+            }
+            picker.scrollTop = (def - min) * itemH;
+            setSelected(def);
+        }
+        function setSelected(val) {
+            picker.querySelectorAll('.picker-item').forEach(item => {
+                const isSel = parseInt(item.dataset.value) === val;
+                item.classList.toggle('selected', isSel);
+                item.innerHTML = item.dataset.value + (isSel ? ' <span class="unit">cm</span>' : '');
+            });
+        }
+        build();
+        let t;
+        picker.addEventListener('scroll', () => {
+            clearTimeout(t);
+            t = setTimeout(() => {
+                const idx = Math.round(picker.scrollTop / itemH + 2);
+                setSelected(min + idx);
+            }, 0);
+        });
+    </script>
+</body>
+
+</html>

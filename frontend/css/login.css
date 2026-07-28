@@ -1,0 +1,236 @@
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Inter", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 500;
+            font-style: normal;
+        }
+
+        body {
+            display: flex;
+            width: 100%;
+            height: 100vh;
+        }
+
+        /* LEFT SIDE */
+
+        .left-side {
+            width: 50%;
+            height: 100vh;
+            background-image: url(/frontend/img/abs.jpg);
+            background-size: cover;
+            background-position: -240px -20px;
+            position: relative;
+        }
+
+        .dark-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+                background-color: rgba(2, 30, 22, 0.55);
+        }
+
+        .left-content {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 40px;
+            color: white;
+        }
+
+        .brand-name {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+
+        .left-title {
+            font-size: 42px;
+            font-weight: bold;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .left-text {
+            font-size: 16px;
+            line-height: 1.6;
+            max-width: 480px;
+            margin-bottom: 40px;
+        }
+
+        .bottom-tag {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 13px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .gear-icon {
+            width: 28px;
+            height: 28px;
+            border: 1px solid white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+        }
+
+        /* RIGHT SIDE */
+
+        .right-side {
+            width: 50%;
+            height: 100vh;
+            background-color: #f7f7f5;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .form-box {
+            width: 520px;
+        }
+
+        .welcome-title {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .welcome-subtitle {
+            font-size: 15px;
+            color: #555555;
+            margin-bottom: 30px;
+        }
+
+        .social-buttons {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 25px;
+        }
+
+        .social-btn {
+            flex: 1;
+            height: 50px;
+            border: 1px solid #cccccc;
+            border-radius: 8px;
+            background-color: white;    
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        .divider {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: #999999;
+            font-size: 12px;
+            letter-spacing: 1px;
+            margin-bottom: 25px;
+        }
+
+        .divider-line {
+            flex: 1;
+            height: 1px;
+            background-color: #dddddd;
+        }
+
+        .divider span {
+            padding: 0 12px;
+        }
+
+        .field-label {
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .field-input {
+            width: 100%;
+            height: 50px;
+            border: 1px solid #cccccc;
+            border-radius: 8px;
+            padding: 0 16px;
+            font-size: 15px;
+            margin-bottom: 20px;
+        }
+
+        .password-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+
+        .forgot-link {
+            font-size: 13px;
+            font-weight: bold;
+            color: #1a1a1a;
+            text-decoration: none;
+        }
+
+        .remember-row {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 25px;
+        }
+
+        .remember-row input {
+            width: 18px;
+            height: 18px;
+        }
+
+        .remember-row label {
+            font-size: 14px;
+        }
+
+        .signin-btn {
+            width: 100%;
+            height: 54px;
+            background-color: #0D4C3C;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-bottom: 25px;
+        }
+
+        .signup-text {
+            text-align: center;
+            font-size: 14px;
+        }
+
+        .signup-text a {
+            font-weight: bold;
+            color: #1a1a1a;
+            text-decoration: none;
+        }
+
+        .footer-links {
+            margin-top: 60px;
+            display: flex;
+            gap: 30px;
+            font-size: 13px;
+            color: #999999;
+        }
+
+        .footer-links a {
+            color: #999999;
+            text-decoration: none;
+        }

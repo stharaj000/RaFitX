@@ -44,48 +44,16 @@
         <div class="badge" id="ageBadge">Selected: 25 years old</div>
     </div>
     <div class="footer">
-        <a href="weight.html" style="text-decoration: none;"><button class="cta">Continue
+        <button id="continueButton" class="cta">Continue
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"
                     stroke-linecap="round" stroke-linejoin="round">
                     <line x1="5" y1="12" x2="19" y2="12" />
                     <polyline points="12 5 19 12 12 19" />
                 </svg>
             </button>
-        </a>
     </div>
 
-    <script>
-        const picker = document.getElementById('agePicker');
-        const badge = document.getElementById('ageBadge');
-        const min = 10, max = 102, defaultAge = 17;
-        const itemH = 52;
-        for (let a = min; a <= max; a++) {
-            const div = document.createElement('div');
-            div.className = 'picker-item';
-            div.textContent = a;
-            div.dataset.value = a;
-            picker.appendChild(div);
-        }
-        function setSelected(age) {
-            document.querySelectorAll('.picker-item').forEach(el => {
-                el.classList.toggle('selected', parseInt(el.dataset.value) === age);
-            });
-            badge.textContent = 'Selected: ' + age + ' years old';
-        }
-        // center default item
-        picker.scrollTop = (defaultAge - min) * itemH;
-        setSelected(defaultAge);
-
-        let scrollTimeout;
-        picker.addEventListener('scroll', () => {
-            clearTimeout(scrollTimeout);
-            scrollTimeout = setTimeout(() => {
-                const idx = Math.round(picker.scrollTop / itemH + 2);
-                const age = min + idx;
-                setSelected(age);
-            }, 0);
-        });
-    </script>
+    <script src="/frontend/js/onboardingScript/age.js"></script>
 </body>
 
 </html>

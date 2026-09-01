@@ -1,5 +1,6 @@
   :root {
       --emerald: #0d4c3c;
+      --emerald-container: #dcfce7;
       --surface: #f8faf7;
       --outline: #d1d5db;
   }
@@ -199,4 +200,16 @@
       justify-content: center;
       gap: 8px;
       cursor: pointer;
+  }
+
+  
+  .badge {
+      display: inline-block;
+      margin-top: 22px;
+      background: var(--emerald-container);
+      color: #166534;
+      font-size: 14px;
+      font-weight: 600;
+      padding: 8px 18px;
+      border-radius: 20px;
   }

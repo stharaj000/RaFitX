@@ -12,7 +12,6 @@
 <body>
     <div class="topbar">
         <div class="brand">RaFitX</div>
-        <div class="help">?</div>
     </div>
     <div class="progress-wrap">
         <div class="progress-bar">
@@ -47,48 +46,19 @@
         </div>
     </div>
     <div class="footer">
-        <a href="height.html" style="text-decoration: none;"><button class="cta">Continue
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="5" y1="12" x2="19" y2="12" />
-                    <polyline points="12 5 19 12 12 19" />
-                </svg>
-            </button>
-        </a>
+        <button id="continueButton" class="cta">Continue
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12" />
+                <polyline points="12 5 19 12 12 19" />
+            </svg>
+        </button>
+
     </div>
 
-    <script>
-        function buildPicker(id, min, max, def, unit) {
-            const el = document.getElementById(id);
-            const itemH = 56;
-            for (let v = min; v <= max; v++) {
-                const div = document.createElement('div');
-                div.className = 'picker-item';
-                div.dataset.value = v;
-                div.innerHTML = v + (v === def ? ' <span class="unit">' + unit + '</span>' : '');
-                el.appendChild(div);
-            }
-            function setSelected(val) {
-                el.querySelectorAll('.picker-item').forEach(item => {
-                    const isSel = parseInt(item.dataset.value) === val;
-                    item.classList.toggle('selected', isSel);
-                    item.innerHTML = item.dataset.value + (isSel ? ' <span class="unit">' + unit + '</span>' : '');
-                });
-            }
-            el.scrollTop = (def - min) * itemH;
-            setSelected(def);
-            let t;
-            el.addEventListener('scroll', () => {
-                clearTimeout(t);
-                t = setTimeout(() => {
-                    const idx = Math.round(el.scrollTop / itemH);
-                    setSelected(min + idx + 1);
-                }, 0);
-            });
-        }
-        buildPicker('currentPicker', 40, 150, 85, 'kg');
-        buildPicker('goalPicker', 40, 150, 75, 'kg');
-    </script>
+
+
+    <script src="/frontend/js/onboardingScript/weight.js"></script>
 </body>
 
 </html>
